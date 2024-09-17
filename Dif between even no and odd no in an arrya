@@ -1,0 +1,31 @@
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n;
+        System.out.println("Give n");
+        n= sc.nextInt() ;
+        int [] arr= new int[n];
+        for(int i=0;i<arr.length;i++){
+            arr[i]=sc.nextInt() ;
+        }
+        int sume=0, sumo=0;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]%2==0){
+                sume=sume+arr[i];
+            }
+            else{
+                sumo=sumo+arr[i];
+            }
+        }
+        if(sume>sumo){
+            System.out.println("Difference between sum of even numbers and odd numbers:"+(sume-sumo));
+        }
+        else{
+            System.out.println("Difference between sum of even numbers and odd numbers:"+(sumo-sume));
+        }
+    }
+}
